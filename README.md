@@ -42,14 +42,24 @@ My Application is a web-based platform that provides functionalities for user au
 
    Make sure you have Python and pip installed. You can download and install them from [Python](https://www.python.org/).
 
-   pip install django
-   pip install djangorestframework
-   pip install django-cors-headers
+    pip install django
+    pip install djangorestframework
+    pip install django-cors-headers
+    pip install python-decouple
+
 
 3. **Configure Django Settings**:
 
    - Add `corsheaders` and `rest_framework` to your `INSTALLED_APPS` in `settings.py`.
    - Configure CORS settings as needed.
+
+3. **create a file named .env on same level of manage.py and add the following content**:
+
+    - DJANGO_SECRET_KEY=your-secret-key-here
+    - DJANGO_DEBUG=True
+    - EMAIL_HOST_USER=your-email@example.com
+    - EMAIL_HOST_PASSWORD=your-email-password
+
 
 4. **Apply Migrations and Run the Server**:
    python manage.py migrate
